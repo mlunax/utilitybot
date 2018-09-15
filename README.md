@@ -22,7 +22,8 @@ Copy `config.json.example` to `config.json`.
 
 ```
 "main":{
-        "token": "write your bot token here"
+        "token": "write your bot token here",
+        "prefix": "your prefix here"
     },
 
     "userJoin":{
