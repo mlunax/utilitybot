@@ -30,7 +30,8 @@ client.on('guildMemberAdd', (member) => {
 
 client.on("message", (message) => {
   try{
-    if(message.author.id != "251801168689364992") return;
+    let a = message.guild.roles.find(x=>x.name.toLowerCase === config.permissions.admin_role_name).members;
+    if(!message.author in a) return
     if(message.author.bot) return;
     if(!message.content.startsWith(prefix)) return;
     let msg = message.content.slice(prefix.length);

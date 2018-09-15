@@ -26,6 +26,10 @@ Copy `config.json.example` to `config.json`.
         "prefix": "your prefix here"
     },
 
+    "permissions":{
+        "admin_role_name": "administrator role name"
+    },
+
     "userJoin":{
         "welcome_msg": ["first", "2nd", "3rd $user", "4th $guild", "$userm Heyooo"],
         "welcome_channel": "channel for sending welcome msges"

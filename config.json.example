@@ -4,6 +4,10 @@
         "prefix": ""
     },
 
+    "permissions":{
+        "admin_role_name": ""
+    },
+
     "userJoin":{
         "welcome_msg": [],
         "welcome_channel": ""
