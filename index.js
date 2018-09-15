@@ -29,14 +29,21 @@ client.on('guildMemberAdd', (member) => {
 });
 
 client.on("message", (message) => {
-  if(message.author.bot) return;
-  if(!message.content.startsWith(prefix)) return;
-  let msg = message.content.slice(prefix.length);
-  if(msg.split(" ")[0] === "bc"){
-    msg = msg.substring(msg.split(" ")[0].length+1);
-    let cname = msg.split(" ")[0];
-    let txt = msg.substring(cname.length+1);
-    message.guild.channels.find(x=>x.name === cname).send(txt);
+  try{
+    if(message.author.id != "251801168689364992") return;
+    if(message.author.bot) return;
+    if(!message.content.startsWith(prefix)) return;
+    let msg = message.content.slice(prefix.length);
+    if(msg.split(" ")[0] === "bc"){
+      console.log(msg);
+      msg = msg.substring(msg.split(" ")[0].length+1);
+      let cname = msg.split(" ")[0];
+      console.log(cname);
+      let txt = msg.substring(cname.length+1);
+      message.guild.channels.find(x=>x.name === cname).send(txt);
+  }
+  }catch(ex){
+    console.log(ex);
   }
 });
 
