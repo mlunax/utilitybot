@@ -1,6 +1,7 @@
 {
     "main":{
-        "token": ""
+        "token": "",
+        "prefix": ""
     },
 
     "userJoin":{
