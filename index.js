@@ -30,10 +30,16 @@ client.on('guildMemberAdd', (member) => {
 
 client.on("message", (message) => {
   try{
-    let a = message.guild.roles.find(x=>x.name.toLowerCase === config.permissions.admin_role_name).members;
-    if(!message.author in a) return
     if(message.author.bot) return;
     if(!message.content.startsWith(prefix)) return;
+    let a = message.guild.roles.find(x => x.name.toLowerCase() === config.permissions.admin_role_name.toLowerCase()).members;
+    let l = false;
+    a.forEach(element => {
+      if(message.author.id == element.id) {
+        l = true;
+    }
+    });
+    if(!l) return;
     let msg = message.content.slice(prefix.length);
     if(msg.split(" ")[0] === "bc"){
       console.log(msg);
@@ -47,5 +53,4 @@ client.on("message", (message) => {
     console.log(ex);
   }
 });
-
 client.login(config.main.token);
