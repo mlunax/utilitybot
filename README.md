@@ -10,7 +10,7 @@
 `npm start` in main folder
 
 ### Turn off the bot? 
-`CTRL+C`
+`CTRL+C` in bot console
 
 ## Configurations
 
