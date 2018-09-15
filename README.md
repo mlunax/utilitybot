@@ -1,6 +1,6 @@
 # Some little utility bot for little usage  
 
-## How to install
+### How to install
 
 1. Download the Node.js in version v10.9.0
 2. `npm install` in main folder
