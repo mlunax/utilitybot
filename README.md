@@ -31,10 +31,10 @@ Copy `config.json.example` to `config.json`.
     },
 
     "userJoin":{
-        "welcome_msg": ["first", "2nd", "3rd $user", "4th $guild", "$userm Heyooo"],
+        "welcome_msg": ["first", "2nd", "3rd <user>", "4th <guild>", "<userm> Heyooo"],
         "welcome_channel": "channel for sending welcome msges"
     }
 ```  
-`$user` - username
-`$userm` - ping the user
-`$guild` - guild name
+`<user>` - username
+`<userm>` - ping the user
+`<guild>` - guild name

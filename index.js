@@ -22,9 +22,9 @@ client.on('ready', () => {
 client.on('guildMemberAdd', (member) => {
   if(config.userJoin.welcome_msg.length <= 0 && config.userJoin.welcome_channel == "") return;
   let msgid = Math.floor(Math.random() * Math.floor(config.userJoin.welcome_msg.length));
-  let msg = config.userJoin.welcome_msg[msgid].replace(/$user/gi, member.displayName);
-  msg = msg.replace(/$userm/gi, member.toString);
-  msg = msg.replace(/$guild/gi, member.guild.name);
+  let msg = config.userJoin.welcome_msg[msgid].replace(/<user>/gi, member.displayName).
+  replace(/<userm>/gi, member.toString()).
+  replace(/<guild>/gi, member.guild.name);
   client.channels.get(config.userJoin.welcome_channel).send();
 });
 
