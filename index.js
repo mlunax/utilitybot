@@ -21,10 +21,4 @@ client.on('guildMemberAdd', (member) => {
   client.channels.get(config.userJoin.welcome_channel).send();
 });
 
-client.on('message', msg => {
-  if (msg.content === 'ping') {
-    msg.reply('Pong!');
-  }
-});
-
 client.login(config.main.token);
